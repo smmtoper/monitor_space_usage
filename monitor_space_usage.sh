@@ -1,6 +1,7 @@
 #!/bin/bash
 monitor_device=$1  #device to monitor eg. /dev/sdc1
 alert_level=$2     #available percentage to alert eg. 1
+check_interval=$3     #check interval from 1 to 99999
  
 monitor_space_usage() {
 
@@ -14,7 +15,7 @@ monitor_space_usage() {
         then
             echo "Alert disk is almost full"
         fi
-        sleep 1
+        sleep $check_interval
     done
 }
 

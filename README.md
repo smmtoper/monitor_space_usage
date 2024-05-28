@@ -30,13 +30,14 @@ chmod u+x monitor_space_usage.sh
 4. Запустить скрипт:
 
 ```bash
-./monitor_space_usage.sh device_to_monitor free_space_alert
+./monitor_space_usage.sh device_to_monitor free_space_alert check_interval
 ```
 
 ## Параметры запуска
 
 - `device_to_monitor` - путь до устройства/раздела, который необходимо мониторить.
 - `free_space_alert` - процент оставшегося места, при привышении которого будет печататься уведомление о переполнении.
+- `check_interval` - интервал между проверками диска в секундах.
 
 ## Поведение скрипта
 
